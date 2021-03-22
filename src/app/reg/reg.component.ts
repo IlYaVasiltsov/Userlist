@@ -31,6 +31,7 @@ export class RegComponent implements OnInit {
   addUser(name,email,pass) {
     const secObj = this.userService.userArr.find(person=> person.email === email || person.name === name);
     // const secObj = this.userService.userArr.find(person=> person.email === email || person.name === name);
+    // const secObj = this.userService.userArr.find(person=> person.email === email || person.name === name);
     if(secObj) {
       this.err = true;
       console.log(secObj);
