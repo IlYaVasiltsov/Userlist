@@ -1,0 +1,10 @@
+
+<h1 mat-dialog-title>Choose user</h1>
+<div mat-dialog-content *ngFor="let user of userService.userArr; let i = index">
+  {{i+1}}. {{user.name}} {{user.email}}
+  <button mat-button mat-dialog-close (click)="deleteUser(user.id,user.name,user.pass,i)">Remove</button>
+</div>
+<div mat-dialog-actions>
+
+  <button mat-button mat-dialog-close>Close</button>
+</div>
