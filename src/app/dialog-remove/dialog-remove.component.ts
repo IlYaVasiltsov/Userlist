@@ -18,9 +18,7 @@ export class DialogRemoveComponent implements OnInit {
   }
 
   deleteUser(id,name,pass,i) {
-      const curPers = this.userService.userArr.find(perosn=>perosn.name ===name);
       const del = Number(sessionStorage.getItem(this.login.isLog))
-      const idx = this.userService.userArr.findIndex(person => person.id === id);
       console.log(del);
       if(del != id) {
         this.userService.deletePers(id);

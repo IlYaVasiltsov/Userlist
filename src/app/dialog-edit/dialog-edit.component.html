@@ -1,7 +1,7 @@
 <h1 mat-dialog-title>Choose user</h1>
-<div mat-dialog-content *ngFor="let user of userService.userArr; let i = index">
+<div mat-dialog-content>
   <div class="forms">
-    {{i+1}}. <mat-form-field class="example-full-width">
+    <mat-form-field class="example-full-width">
       <mat-label>User name</mat-label>
       <input [formControl]="nameFormControl" matInput placeholder="User name">
       <mat-error *ngIf="nameFormControl.hasError('pattern') && !nameFormControl.hasError('required')">
@@ -22,7 +22,7 @@
       </mat-error>
     </mat-form-field>
     <button mat-button mat-dialog-close
-    (click)="saveChanges(i,user.id,nameFormControl.value,emailFormControl.value,user.pass)">Save</button>
+    (click)="saveChanges(nameFormControl.value,emailFormControl.value)">Save</button>
   </div>
 </div>
 <div mat-dialog-actions>

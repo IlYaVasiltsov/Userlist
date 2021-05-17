@@ -20,7 +20,7 @@
     <span *ngIf="logErr"> {{message}} <a routerLink="/registration">Reg</a> </span>
     <button *ngIf="inputName.length>2 && inputPass.length>2 && !logErr" mat-button (click)="login(inputName,inputPass)"> login</button>
     <span *ngIf="logSucc">{{secMessage}}</span>
-    <span><a routerLink="/userlist">user list</a></span>
+    <!-- <span><a routerLink="/userlist">user list</a></span> -->
 
   </mat-card-actions>
 </mat-card>

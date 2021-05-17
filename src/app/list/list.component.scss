@@ -11,3 +11,38 @@
   max-width: 400px;
   background-color: lightgray;
 }
+
+a {
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 30px;
+  margin-top: 20px;
+  border: 3px solid black;
+  border-radius: 10px;
+  font-size: 25px;
+  transition: .3s;
+
+  &:hover {
+    background-color: lightgray;
+    color: black;
+  }
+}
+
+.fir {
+  text-align: center;
+  margin-left: auto;
+}
+
+.sec {
+  text-align: center;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

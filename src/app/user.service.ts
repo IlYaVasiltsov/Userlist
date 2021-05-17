@@ -20,9 +20,9 @@ export class UserService {
 
 
   userArr:users[] = [
-    {id:1,name:"ilya",email:"ilya@mail.com",pass:"12345"},
-    {id:2,name:"4e4en",email:"4e4en@mail.com",pass:"123456"},
-    {id:3,name:"bshlyk",email:"bshlyk@mail.com",pass:"1234567"}
+    {id:0,name:"ilya",email:"ilya@mail.com",pass:"12345"},
+    {id:1,name:"4e4en",email:"4e4en@mail.com",pass:"123456"},
+    {id:2,name:"bshlyk",email:"bshlyk@mail.com",pass:"1234567"}
   ]
 
   deletePers(id) {
@@ -32,7 +32,7 @@ export class UserService {
 
   addUser(name,email,pass) {
     const newUser = this.userArr.push({id:Date.now(),name:name,email:email,pass:pass});
-    console.log(this.userArr);
+    // console.log(this.userArr);
   }
 
   logUser(inputName,inputPass) {

@@ -1,6 +1,7 @@
 import { UserService } from './../user.service';
 import { Component, OnInit, Input } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,7 @@ import {FormControl, Validators} from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(public userService: UserService) { }
+  constructor(public userService: UserService, public router: Router) { }
 
   emailFormControl = new FormControl('', [
     Validators.required,
@@ -37,6 +38,7 @@ export class LoginComponent implements OnInit {
       const currId = String(logUser.id)
       sessionStorage.setItem(this.isLog,currId);
       console.log(currId);
+      this.router.navigate(['/userlist']);
     }
   }
 

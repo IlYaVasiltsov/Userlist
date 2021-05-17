@@ -15,6 +15,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { DialogRemoveComponent } from './dialog-remove/dialog-remove.component';
 import { DialogEditComponent } from './dialog-edit/dialog-edit.component';
 import { DialogAlertComponent } from './dialog-alert/dialog-alert.component';
+import { DialogaddComponent } from './dialogadd/dialogadd.component';
+import { UserFilterPipe } from './user-filter.pipe';
 
 
 @NgModule({
@@ -26,6 +28,8 @@ import { DialogAlertComponent } from './dialog-alert/dialog-alert.component';
     DialogRemoveComponent,
     DialogEditComponent,
     DialogAlertComponent,
+    DialogaddComponent,
+    UserFilterPipe
   ],
   imports: [
     BrowserModule,

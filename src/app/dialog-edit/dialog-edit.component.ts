@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import {FormControl, Validators} from '@angular/forms';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-dialog-edit',
@@ -9,7 +10,7 @@ import {FormControl, Validators} from '@angular/forms';
 })
 export class DialogEditComponent implements OnInit {
 
-  constructor(public userService: UserService) { }
+  constructor(public userService: UserService,@Inject(MAT_DIALOG_DATA) public data: {id,pass}) { }
 
   emailFormControl = new FormControl('', [
     Validators.required,
@@ -32,16 +33,19 @@ export class DialogEditComponent implements OnInit {
 
 
 
-  saveChanges(i,id,inputName,inputEmail,pass) {
-        const idx = this.userService.userArr.findIndex(person=> person.email === inputEmail && person.name === inputName );
+  saveChanges(inputName,inputEmail) {
+        const idx2 = this.userService.userArr.findIndex(person=> person.email === inputEmail && person.name === inputName );
+        const idx = this.userService.userArr.findIndex(perosn=> perosn.id === this.data.id);
         const qwe = this.userService.userArr.find(person=> person.email === inputEmail && person.name === inputName );
         console.log(qwe);
         console.log(idx);
-        if( qwe && idx !=  i) {
+        console.log(idx2);
+        if( idx != idx2 && qwe ){
           console.log("us ex");
         } else  {
           console.log("reg new");
-          const newarr = this.userService.userArr.splice(i,1,{id:id,name:inputName,email:inputEmail,pass:pass});
+          const newarr = this.userService.userArr.splice(idx,1,{id:this.data.id,name:inputName,email:inputEmail,pass:this.data.pass});
+          console.log(this.userService.userArr);
           }
       }
 
