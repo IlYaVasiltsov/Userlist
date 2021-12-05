@@ -20,7 +20,7 @@ export class UserService {
 
 
   userArr:users[] = [
-    {id:0,name:"ilya",email:"ilya@mail.com",pass:"12345"},
+    {id:0,name:"ADMIN",email:"ilya@mail.com",pass:"ADMIN"},
     {id:1,name:"4e4en",email:"4e4en@mail.com",pass:"123456"},
     {id:2,name:"bshlyk",email:"bshlyk@mail.com",pass:"1234567"}
   ]

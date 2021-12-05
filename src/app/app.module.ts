@@ -17,6 +17,8 @@ import { DialogEditComponent } from './dialog-edit/dialog-edit.component';
 import { DialogAlertComponent } from './dialog-alert/dialog-alert.component';
 import { DialogaddComponent } from './dialogadd/dialogadd.component';
 import { UserFilterPipe } from './user-filter.pipe';
+import { MainpageComponent } from './mainpage/mainpage.component';
+import { MatCarouselModule } from '@ngmodule/material-carousel';
 
 
 @NgModule({
@@ -29,7 +31,8 @@ import { UserFilterPipe } from './user-filter.pipe';
     DialogEditComponent,
     DialogAlertComponent,
     DialogaddComponent,
-    UserFilterPipe
+    UserFilterPipe,
+    MainpageComponent
   ],
   imports: [
     BrowserModule,
@@ -41,8 +44,8 @@ import { UserFilterPipe } from './user-filter.pipe';
     MatInputModule,
     ReactiveFormsModule,
     MatCardModule,
-    MatDialogModule
-
+    MatDialogModule,
+    MatCarouselModule,
   ],
   providers: [LoginComponent,DialogRemoveComponent],
   bootstrap: [AppComponent],

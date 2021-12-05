@@ -1,3 +1,4 @@
+
 .example-full-width {
   width: 100%;
   min-width: 150px;
@@ -5,9 +6,13 @@
 }
 
 .example-card {
-  top: 50%;
-  left: 50%;
-  margin: -240px;
+  top: 35%;
+  left: 35%;
+  // margin: -240px;
   max-width: 400px;
-  background-color: lightgray;
+  background-color: rgba($color: white, $alpha: 1);
 }
+
+
+
+

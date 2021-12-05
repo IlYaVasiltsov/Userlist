@@ -1,0 +1,125 @@
+.img {
+  background: url(../../assets/trenazherniy-zal-minsk-skidka-olympicfightfitness-zaved2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 1200px;
+  opacity: 0.9;
+
+}
+
+.sections {
+  height: 600px;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header {
+  padding: 20px;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.name  {
+  margin-top: 10px;
+  font-size: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 40px;
+  width: 180px;
+}
+
+a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 100px;
+  padding: 10px;
+  color: black;
+  font-size: 15px;
+  user-select: none;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: white;
+
+
+  &:hover {
+    border: 1px solid white;
+  }
+
+}
+
+mat-card {
+  height: 500px;
+  width: 300px;
+  // border: 2px solid black;
+  box-sizing: border-box;
+  margin: 50px;
+  opacity: 1;
+  transition: 0.5s;
+  cursor: pointer;
+  word-wrap: break-word;
+  // overflow-y: scroll;
+  // font-weight: bold;
+  color: white;
+  text-align: justify;
+  background-color: rgba($color: black, $alpha: 0.4);
+
+  &:hover {
+    height: 550px;
+    width: 400px;
+  }
+}
+
+mat-card-content {
+  max-height: 80%;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.carousel {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.footer {
+  height: 50px;
+  width: 100%;
+  color: white;
+  padding: 70px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 25px;
+  line-height: initial;
+}
+
+
+
+
+
+
+
+
